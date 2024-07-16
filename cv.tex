@@ -1,0 +1,269 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+\newcommand{\name}{Valentino Badano}
+\newcommand{\course}{Ingeniería en Informática} 
+
+\newcommand{\phone}{2355-556925} 
+\newcommand{\emaila}{valentinobadano@gmail.com}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +54-\phone}\\
+  Estudiante de Ingeniería en Informática & \href{https://github.com/ValentinoBadano}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {Perfil de GitHub}} \\  
+  {Universidad Nacional del Noroeste de la Provincia de Buenos Aires} & \href{https://www.linkedin.com/in/valentino-badano-6b7467214/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {Perfil de LinkedIn}}
+\end{tabularx}
+}
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Educación}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ingeniería en Informática}{Promedio: 7.96}
+      {Universidad Nacional del Noroeste de la Provincia de Buenos Aires, Junín}{2021-25}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+%-----------PROJECTS-----------------
+\section{\textbf{Proyectos Personales}}
+\resumeSubHeadingListStart
+    \resumeProject
+      {Página Web para la Sociedad Española de Junín} 
+      {Un sitio web de gestión de eventos para la Sociedad Española de Socorros Mutuos.} 
+      {} 
+
+      \resumeItemListStart
+        \item {Desarrollo y hosting de la aplicación web.}
+        \item {Tecnologías utilizadas: Java, Spring Web, Bootstrap, Thymeleaf, PostgreSQL.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Sistema de gestión de inventario}
+      {Proyecto en grupo para una pequeña empresa del agro. } 
+      {}
+
+      \resumeItemListStart
+        \item {Se gestionó el proyecto utilizando Trello y con una metodología SCRUM.}
+        \item {Tecnologías utilizadas: PHP, MySQL, Bootstrap.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+      {Compilador en Java}
+      {Generador de código IR de LLVM a partir de un código fuente.}
+      {} 
+
+      \resumeItemListStart
+        \item {Análisis léxico y sintáctico, generación del AST.}
+        \item {Tecnologías utilizadas: Java, JFlex, JCup, Graphviz.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+      {Framework de redes neuronales} 
+      {Implementación con Python de redes neuronales desde cero.} 
+      {} 
+
+      \resumeItemListStart
+        \item {Se logró resolver MNIST utilizando únicamente cálculo.}
+        \item {Tecnologías utilizadas: Python, Numpy, Matplotlib.}
+
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experiencia}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Técnico Operativo de Software}{Online}
+      {AgroGI}{Abril 2024 - Presente}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+        \item Resolución de problemas técnicos y provisión de soporte técnico para el software empresarial.
+        \item Comunicación activa con clientes para brindar asistencia y soporte remoto.
+        \item Instalación y configuración remota de software.
+        \item Configuración y mantenimiento de ordenadores en red.
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+
+
+
+
+
+\section{\textbf{Habilidades técnicas e intereses}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Lenguajes}{: C/C++, Python, Javascript, HTML+CSS, Java, GoLang, Kotlin } \\
+     \textbf{Librerías}{: Tensorflow, Pytorch, Pandas, Numpy } \\
+     \textbf{Herramientas}{: Selenium, Postman, Nodejs, VScode, Git, Github, Linux } \\ 
+     \textbf{Frameworks}{: ReactJs, Spring Boot, Metasploit } \\
+     \textbf{Redes}{: TCP/IP, VLANs, VPNs, NMap, Wireshark } \\
+     \textbf{Cloud/Bases de datos}{: MongoDb, Firebase, MySQL, PostgreSQL, AWS, Azure } \\  
+     \textbf{Areas de Interés}{: Desarrollo web, Análisis de datos, Ciberseguridad, Administración de redes} \\
+     \textbf{Habilidades blandas}{: Resolución de problemas, Trabajo en Equipo, Pensamiento Analítico, Iniciativa, Adaptabilidad} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+\section{\textbf{Certificados}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Ciberseguridad }
+    {Fundación Telefónica} 
+    {May - Oct 2024} 
+    \resumeItemListStart
+    \item {Administración de firewalls, implementación y monitoreo de IDS/IPS, análisis de vulnerabilidades y remediación.}
+    \item {Uso de Metasploit para explotación de vulnerabilidades y de herramientas forenses (FTK, EnCase).}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-10mm}
+
+\resumeSubHeadingListStart
+\resumePOR{Penetration Tester } 
+    {HackTheBox Academy}
+    {} 
+    \resumeItemListStart
+    \item {Pruebas de penetración: reconocimiento, enumeración, documentación y elaboración de informes.}
+    \item {Uso de herramientas de pruebas de penetración (Metasploit, Nmap, Burp Suite, etc).}
+    \item {Técnicas de escalamiento de privilegios.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-10mm}
+
+\resumeSubHeadingListStart
+\resumePOR{English Certificate } 
+    {EF SET} 
+    {} 
+    \resumeItemListStart
+    \item {78/100 (C2 Proficient).}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-10mm}
+\end{document}
