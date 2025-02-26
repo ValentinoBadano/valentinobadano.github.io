@@ -9,20 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
-    <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.min.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-
-        tippy('[data-tippy-content]', {
-            placement: 'top', // top
-            animation: 'fade', // animación
-            arrow: true, // flecha?
-        });
-    });
-    </script>
-
-
-
     <style>
         body {
             font-family: "Ubuntu Mono", monospace;
@@ -45,52 +31,47 @@
             color: #fff;
             font-size: 24px;
         }
-
         a:hover {
             box-shadow: 0 3px 0 #126fd3;
             text-decoration: none;
             color: #eee;
         }
-
-        titulo {
-            font-weight: 20;
+        .titulo {
+            font-weight: bold; /* o 500 si la fuente lo soporta */
         }
-
     </style>
 </head>
-
 <body>
     <div class="container d-flex align-items-center justify-content-center vh-100">
-
         <div class="jumbotron">
             <h1 class="display-4 nombre">Valentino Badano</h1>
             <p class="lead titulo">Software Engineer</p>
-
             <div class="social">
                 <a href="https://www.linkedin.com/in/valentino-badano-6b7467214/" target="_blank" data-tippy-content="LinkedIn">
-                    <i class="bi bi-linkedin fa-solid"></i>
+                    <i class="bi bi-linkedin"></i>
                 </a>
                 <a href="https://github.com/ValentinoBadano" target="_blank" data-tippy-content="Github">
-                    <i class="bi bi-github fa-solid"></i>
+                    <i class="bi bi-github"></i>
                 </a>
                 <a href="mailto:valentinobadano@gmail.com" target="_blank" data-tippy-content="Correo">
-                    <i class="bi bi-envelope-at fa-solid"></i>
+                    <i class="bi bi-envelope-at"></i>
                 </a>
                 <a href="./cv.pdf" target="_blank" data-tippy-content="Currículum">
-                    <i class="bi bi-file-earmark-person fa-solid" ></i>
+                    <i class="bi bi-file-earmark-person"></i>
                 </a>
             </div>
-
         </div>
-
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/1bcfef85a4.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            tippy('[data-tippy-content]', {
+                placement: 'top',
+                animation: 'fade',
+                arrow: true,
+            });
+        });
+    </script>
 </body>
 </html>
